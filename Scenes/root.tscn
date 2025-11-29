@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7yxgi6sa85cl"]
+
+[ext_resource type="Script" uid="uid://dvkjlhkkfqqxt" path="res://Scripts/root.gd" id="1_i04dx"]
+[ext_resource type="Texture2D" uid="uid://co5okopm6kro4" path="res://Assets/pause.svg" id="2_8pvmw"]
+[ext_resource type="FontFile" uid="uid://b75mcvevvfb5m" path="res://Assets/Fonts/JetBrainsMono-Regular.ttf" id="2_vnucn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3mwy"]
+font = ExtResource("2_vnucn")
+
+[sub_resource type="LabelSettings" id="LabelSettings_4g5cr"]
+font = ExtResource("2_vnucn")
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_i04dx")
+number_of_iterations = 5
+initalize_box = true
+grid_width = 20.0
+grid_height = 20.0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 179.0
+offset_bottom = 56.0
+
+[node name="PointLabel" type="Label" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Number of Points: "
+label_settings = SubResource("LabelSettings_c3mwy")
+
+[node name="StickLabel" type="Label" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Number of Sticks: "
+label_settings = SubResource("LabelSettings_4g5cr")
+
+[node name="PlayPause" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 1866.0
+offset_top = 4.0
+offset_right = 1916.0
+offset_bottom = 54.0
+texture = ExtResource("2_8pvmw")
+expand_mode = 2
