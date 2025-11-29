@@ -31,7 +31,7 @@ class Stick:
 
 @export_category("Simulator Settings")
 @export var gravity: float = 980.0
-@export var number_of_iterations: int = 10
+@export var number_of_iterations: int = 5
 
 @export_group("Point Settings")
 @export var point_radius: float = 10.0
