@@ -38,7 +38,7 @@ The simulator includes several customizable parameters:
 
 ### Simulator Settings
 - **Gravity**: Strength of gravitational pull (default: 980.0)
-- **Number of Iterations**: Higher values = more stable simulation (default: 10)
+- **Number of Iterations**: Higher values = more stable simulation at the cost of performance (default: 5)
 
 ### Point Settings
 - **Point Radius**: Visual size of points (default: 10.0)
